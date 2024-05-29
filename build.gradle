@@ -17,6 +17,7 @@ sonar {
         property "sonar.projectKey", "org.sonarqube:gradle-multimodule"
         property "sonar.host.url", "http://localhost:9000"
         property "sonar.token", "sqa_6e4c75395d17eb0d0ec0b84c6387ed26208bc305"
+        property "sonar.java.binaries", "module-one/src/main/java, module-two/src/main/java"
         property "sonar.scm.disabled", "true"
     }
 }
