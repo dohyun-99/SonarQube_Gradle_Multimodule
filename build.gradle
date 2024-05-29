@@ -29,11 +29,30 @@ sonar {
 
 subprojects {
     apply plugin: 'java-library'
+    apply plugin: 'jacoco'
     apply plugin: 'org.sonarqube'
+
+    test {
+        useJUnitPlatform()
+        finalizedBy jacocoTestReport
+    }
+
+    jacoco {
+        toolVersion = "0.8.7"
+    }
+
+    jacocoTestReport {
+        reports {
+            xml.required = true
+            html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+        }
+    }
+
     sonar {
         properties {
-            //property "sonar.java.libraries",
-   	    }
+            property "sonar.java.binaries", file("build/classes/java/main").path
+            property "sonar.coverage.jacoco.xmlReportPaths", file("build/reports/jacoco/test/jacocoTestReport.xml").path
+        }
     }
 }
 
