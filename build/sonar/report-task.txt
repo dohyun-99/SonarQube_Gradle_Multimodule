@@ -1,6 +1,0 @@
-projectKey=org.sonarqube:gradle-multimodule
-serverUrl=http://localhost:9000
-serverVersion=10.5.1.90531
-dashboardUrl=http://localhost:9000/dashboard?id=org.sonarqube%3Agradle-multimodule
-ceTaskId=b3b30a11-385a-4872-9bb2-e3c995e7ba72
-ceTaskUrl=http://localhost:9000/api/ce/task?id=b3b30a11-385a-4872-9bb2-e3c995e7ba72
