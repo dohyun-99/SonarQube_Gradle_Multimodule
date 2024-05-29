@@ -11,6 +11,11 @@ allprojects {
   version = "$baseVersion" + (snapshotVersion ? "-SNAPSHOT" : "")
 }
 
+dependencies {
+    implementation 'ch.qos.logback:logback-classic:1.2.10'
+}
+
+
 sonar {
     properties {
         property "sonar.projectName", "Example of SonarScanner for Gradle - Multimodule"
